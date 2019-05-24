@@ -1,0 +1,2 @@
+const year = new Date().getFullYear();
+document.getElementsByClassName("copyright-text")[0].innerHTML = `&copy; ${year == "2019" ? year : "2019-" + year} <a href="https://jacenboy.com" target="_blank">JacenBoy</a>. All rights reserved.`;
