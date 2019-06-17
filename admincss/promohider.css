@@ -1,3 +1,7 @@
 .bws_banner_on_plugin_page {
   display: none !important;
 }
+
+.updraft-ad-container {
+  display: none !important;
+}
