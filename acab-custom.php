@@ -3,7 +3,7 @@
 Plugin Name: A Certain Anime Blog Custom Tweaks
 Plugin URI: https://anime.jacenboy.com/
 Description: Custom add-ins and functions for A Certain Anime Blog
-Version: 1.1
+Version: 1.2
 Author: JacenBoy
 Author URI: https://jacenboy.com/
 License: AGPLv3 or later
