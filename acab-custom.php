@@ -81,6 +81,15 @@ class acab_custom {
     if ($atts['medium'] != "anime" && $atts['medium'] != "manga") return $content;
     return "<a href=\"https://kitsu.io/{$atts['medium']}/{$atts['slug']}/\" target=\"_blank\" rel=\"nofollow\">{$content}</a>";
   }
+
+  // Custom shortcode for generating anime-planet links
+  public function ap_shortcode($atts, $content = "anime-planet.com") {
+    if (!$atts['slug'] || !$atts['medium']) return $content;
+    $atts['slug'] = strtolower($atts['slug']);
+    $atts['medium'] = strtolower($atts['medium']);
+    if ($atts['medium'] != "anime" && $atts['medium'] != "manga" && $atts['medium'] != "people" && $atts['medium'] != "characters") return $content;
+    return "<a href=\"https://www.anime-planet.com/{$atts['medium']}/{$atts['slug']}/\" target=\"_blank\" rel=\"nofollow\">{$content}</a>";
+  }
 }
 
 // Load the custom CSS and JavaScript on the frontend
@@ -92,3 +101,4 @@ add_action("admin_footer", "acab_custom::load_admin_scripts");
 
 // Add the custom shortcodes
 add_shortcode("kitsu", "acab_custom::kitsu_shortcode");
+add_shortcode("ap", "acab_custom::ap_shortcode");
